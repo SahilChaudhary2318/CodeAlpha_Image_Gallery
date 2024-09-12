@@ -15,39 +15,7 @@ CSS: Styling, hover effects, and layout of the gallery.
 JavaScript: Modal functionality and image navigation.
 
 Code Snippet:
-Here's a snippet of the main HTML that makes the gallery basic structure:
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <centre>
-  <div class="gallery-section">
-    <h3>Supercars</h3>
-    <div class="gallery">
-      <div class="thumbnail-container">
-        <img src="https://image.cnbcfm.com/api/v1/image/102396732-trequarti_basso.?v=1423061058&w=1600&h=900" alt="Ferrari 488 GTB" class="thumbnail">
-        <p>Ferrari 488 GTB</p>
-      </div>
-<div class="modal" id="imageModal">
-  <span class="close" id="closeModal">&times;</span>
-  <h2 id="modalHeading"></h2>
-  <img class="modal-content" id="fullImage" src="" alt="">
-  <p id="modalCaption"></p>
-  <div class="modal-controls">
-    <button id="prevModal">Prev</button>
-    <button id="nextModal">Next</button>
-  </div>
-</div>
-  <script src="script.js"></script>
-</body>
-</html>
-
+Go to index.html for basic structure of the Web page. Styles.css for styling and script.js for functionality of the Web page.
 
 How It Works:
 The gallery displays image thumbnails horizontally in a flexible layout. Hovering over an image scales it up slightly.
