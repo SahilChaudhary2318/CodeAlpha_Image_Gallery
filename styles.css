@@ -1,0 +1,201 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+}
+
+
+.gallery-section {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-section h3 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 15px;
+    justify-content: center;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail-container:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail-container p {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#modalHeading {
+    color: #fff;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+#modalCaption {
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.controls button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #777;
+}
+
+
+@media (max-width: 768px) {
+    .gallery-section h3 {
+        font-size: 1.4em;
+    }
+
+    .thumbnail-container {
+        width: 120px;
+    }
+
+    .thumbnail {
+        width: 120px;
+        height: 80px;
+    }
+
+    .controls button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
+
+.modal-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    padding: 0 20px;
+}
+
+.modal-controls button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
